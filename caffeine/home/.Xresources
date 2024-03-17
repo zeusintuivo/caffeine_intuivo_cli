@@ -1,0 +1,152 @@
+
+
+!
+! Xft
+!
+
+Xft.dpi:                    96
+Xft.antialias:              true
+Xft.rgba:                   rgb
+Xft.hinting:                true
+Xft.hintstyle:              hintslight
+
+!
+! URxvt
+!
+
+! Quick Reference
+!
+! Scrolling:
+!   Scroll Wheel
+!   Shift-PgUp/PgDn
+!
+! Copy/Paste:
+!   Mouse-Select        : Copy to PRIMARY
+!   Shift + Mouse-Select: Copy to CLIPBOARD
+!
+!   Middle-Click        : Paste from PRIMARY
+!   Shift + Middle-Click: Paste from CLIPBOARD
+!
+!   Ctrl+Shift+V        : Paste from CLIPBOARD
+!   Ctrl+Alt+Shift+V    : Paste from PRIMARY
+!
+
+URxvt.termName:             rxvt-unicode-256color
+URxvt.intensityStyles:      true
+URxvt.loginShell:           true
+URxvt.cursorBlink:          true
+URxvt.urgentOnBell:         true
+URxvt.saveLines:            12000
+URxvt.override-redirect:    false
+URxvt.dynamicColors:        on
+
+URxvt.depth:                32
+URxvt.geometry:             90x30
+URxvt.internalBorder:       2
+URxvt.letterSpace:          0
+URxvt.lineSpace:            0
+
+URxvt.keysym.Home:          \033[1~
+URxvt.keysym.End:           \033[4~
+URxvt.keysym.KP_Home:       \033[1~
+URxvt.keysym.KP_End:        \033[4~
+
+URxvt.keysym.Control-Up:    \033[1;5A
+URxvt.keysym.Control-Down:  \033[1;5B
+URxvt.keysym.Control-Left:  \033[1;5D
+URxvt.keysym.Control-Right: \033[1;5C
+
+URxvt.keysym.Control-minus:     resize-font:smaller
+URxvt.keysym.Control-plus:      resize-font:bigger
+URxvt.keysym.Control-equal:     resize-font:reset
+URxvt.keysym.Control-question:  resize-font:show
+
+URxvt*font:           xft:DejaVuSansMono Nerd Font:size=10
+URxvt.background:     #1F1D19
+URxvt.foreground:     #DEDEDE
+URxvt.font:           xft:DejaVu Sans Mono:pixelsize=12:antialias=true:hinting=true
+URxvt.boldFont:       xft:DejaVu Sans Mono:bold:pixelsize=12:antialias=true:hinting=true
+URxvt.italicFont:     xft:Iosevka\ Term\ SS05:style=Italic:size=8
+URxvt.boldItalicfont: xft:Iosevka\ Term\ SS05:style=Bold\ Italic:size=8
+
+URxvt*scrollBar:            false
+URxvt*scrollTtyOutput:      false
+URxvt*scrollWithBuffer:     true
+URxvt*scrollTtyKeypress:    true
+URxvt.secondaryScreen:      1
+URxvt.secondaryScroll:      1
+URxvt.secondaryWheel:       1
+
+URxvt*perl-lib:             /usr/lib/urxvt/perl/
+URxvt*perl-ext-common:      default,matcher,keyboard-select
+
+URxvt.keysym.M-Escape:      perl:keyboard-select:activate
+
+URxvt*urlLauncher:          x-www-browser
+URxvt*matcher.button:       1
+URxvt*matcher.pattern.1:    \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+
+URxvt.clipboard.autocopy:   true
+URxvt.clipboard.copycmd:    xclip -i -selection clipboard
+URxvt.clipboard.pastecmd:   xclip -o -selection clipboard
+
+!
+! Color scheme
+!
+
+!special
+URxvt*foreground:   #f1ebeb
+URxvt*background:   [85]#272822
+URxvt*fading:       40
+URxvt*cursorColor:  #f1ebeb
+
+! black
+*.color0:       #101010
+*.color8:       #76715e
+! red
+*.color1:       #dc2566
+*.color9:       #fa2772
+! green
+*.color2:       #8fc029
+*.color10:      #a7e22e
+! yellow
+*.color3:       #d4c96e
+*.color11:      #e7db75
+! blue
+*.color4:       #3472b7
+*.color12:      #66d9ee
+! magenta
+*.color5:       #9358fe
+*.color13:      #ae82ff
+! cyan
+*.color6:       #56b7a5
+*.color14:      #66efd5
+! white
+*.color7:       #acada1
+*.color15:      #cfd0c2
+
+
+
+!
+! Rofi
+!
+
+rofi.width:             50
+rofi.location:          0
+rofi.separator-style:   solid
+
+rofi.hide-scrollbar:    true
+rofi.color-enabled:     true
+
+!                       BG       BORDER   SEP
+rofi.color-window:      #272822, #76715e, #272822
+
+!                       BG       FG       ALT BG   HL BG    HL FG
+rofi.color-normal:      #272822, #cfd0c2, #272822, #3472b7, #acada1
+rofi.color-active:      #272822, #cfd0c2, #272822, #d4c96e, #48483e
+rofi.color-urgent:      #272822, #cfd0c2, #272822, #dc2566, #48483e
+
+
+
+
+
