@@ -922,7 +922,8 @@ _redhat_flavor_install() {
     mkdir -p /usr/share/fonts/caffeine-font
   fi
   directory_exists_with_spaces /usr/share/fonts/caffeine-font
-	cp -R "${base_dir}/global/usr/share/fonts/caffeine-font" /usr/share/fonts/
+	cp -R "${base_dir}/global/usr/share/fonts/caffeine-font/*.ttf" /usr/share/fonts/
+	cp -R "${base_dir}/global/usr/share/fonts/caffeine-font/readme.md" /usr/share/fonts/
 	chown -R "${SUDO_USER}" /usr/share/fonts/
 	file_exists_with_spaces /usr/share/fonts/readme.md
 
