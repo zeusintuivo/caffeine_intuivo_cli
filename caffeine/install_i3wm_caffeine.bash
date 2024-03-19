@@ -636,7 +636,7 @@ _debian_flavor_install() {
     redshift
     xbacklight
 
-    mpd
+    # mpd
     mpc
     ncmpcpp
 
@@ -644,7 +644,7 @@ _debian_flavor_install() {
     mpv
     feh
     scrot
-    vlc
+    # vlc
     vim-gtk
     gtk2-engines-pixbuf
     gtk2-engines-murrine
@@ -845,14 +845,14 @@ _redhat_flavor_install() {
     picom
     redshift
     xbacklight
-    mpd
+    # mpd
     mpc
     ncmpcpp
 		zathura
     mpv
     feh
     scrot
-    vlc
+    # vlc
     vim
 		gdk-pixbuf2
     rust-gdk-pixbuf-sys-devel
