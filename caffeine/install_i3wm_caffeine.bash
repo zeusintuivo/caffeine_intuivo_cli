@@ -886,7 +886,7 @@ _redhat_flavor_install() {
 		rust-xcb+shape-devel
     rust-xcb+randr-devel
     libev-devel
-    rust-xcb+genericevent-devel
+    # rust-xcb+genericevent-devel
 		pango
     pango-devel
     rust-pango-devel
