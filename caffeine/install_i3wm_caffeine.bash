@@ -76,7 +76,8 @@ INT ..."
 load_struct_testing(){
   function _trap_on_error(){
     local -ir __trapped_error_exit_num="${2:-0}"
-    echo -e "\\n \033[01;7m*** 2 ERROR TRAP $THISSCRIPTNAME \\n${BASH_SOURCE}:${BASH_LINENO[-0]} ${FUNCNAME[1]}() \\n$0:${BASH_LINENO[1]} ${FUNCNAME[2]}()  \\n$0:${BASH_LINENO[2]} ${FUNCNAME[3]}() \\n ERR ...\033[0m  \n \n "
+		echo -e "\\n \033[01;7m*** tasks_base/sudoer.bash:$LINENO load_struct_testing() ERROR TRAP $THISSCRIPTNAME \\n${BASH_SOURCE}:${BASH_LINENO[-0]} ${FUNCNAME[1]}() \\n$0:${BASH_LINENO[1]} ${FUNCNAME[2]}()  \\n$0:${BASH_LINENO[2]} ${FUNCNAME[3]}() \\n ERR ...\033[0m  \n \n "
+
     echo ". ${1}"
     echo ". exit  ${__trapped_error_exit_num}  "
     echo ". caller $(caller) "
@@ -1108,7 +1109,9 @@ _fedora_40__64() {
 	  # install dnf pre requisites
     xdm
 		pavucontrol
-	  gdbm-devel
+    pulseaudio
+    pulseaudio-utils
+    gdbm-devel
 		gdbm-libs
 		dunst
 		dbus-x11
@@ -1308,7 +1311,11 @@ _fedora_40__64() {
   xdg-mime default feh.desktop image/png
   su - "${SUDO_USER}" -c 'xdg-mime default feh.desktop image/jpeg'
 	su - "${SUDO_USER}" -c 'xdg-mime default feh.desktop image/png'
-
+  pulseaudio --check
+  pulseaudio -D
+  su - "${SUDO_USER}" -c 'pulseaudio --check'
+  su - "${SUDO_USER}" -c 'pulseaudio -D'
+  
   # _add_variables_to_bashrc_zshrc
   # ensure i3wm or "Canceling until i3wm did not install"
   # su - "${SUDO_USER}" -c 'i3wm install -l'
