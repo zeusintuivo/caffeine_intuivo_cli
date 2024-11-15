@@ -59,7 +59,6 @@ bindsym     XF86AudioPlay           exec mpc toggle
 bindsym     XF86AudioPrev           exec mpc prev
 bindsym     XF86AudioNext           exec mpc next
 
-
 bindsym     $mod+Shift+q            kill
 bindsym     Mod1+F4                 kill
 # bindsym     $mod+Return             exec i3-sensible-terminal
@@ -82,9 +81,6 @@ bindsym     $mod+Shift+t            exec --no-startup-id ~/.config/scripts/rofi-
 bindsym     $mod+Shift+d            exec ~/.config/scripts/rofi-display.py
 bindsym     $mod+c                  exec ~/.config/scripts/rofi-remmina.py
 bindsym     $mod+Escape             exec --no-startup-id i3-sensible-terminal -name dropdownTerminal
-# bindsym     $mod+Alt+Return         exec yakuake
-bindsym     Mod1+$mod+Return         exec yakuake
-bindsym     $mod+Ctrl+Down          exec guake --toggle
 
 # change focus
 bindsym     $mod+h                  focus left
@@ -484,12 +480,13 @@ exec yakuake
 # exec  $HOME/_/software/rubymine/bin/rubymine.sh
 # exec  thunderbird
 # exec signal-desktop
-# exec telegram-desktop
+exec telegram-desktop
 # exec whatsdesk
-# exec cd /home/zeus/_/software/youpforwhatsapp/build && sudo ninja install -j 8 && GSETTINGS_SCHEMA_DIR=/home/zeus/_/software/youpforwhatsapp/data /home/zeus/_/software/youpforwhatsapp/build/target/debug/youp
+exec cd /home/zeus/_/software/youpforwhatsapp/build && sudo ninja install -j 8 && GSETTINGS_SCHEMA_DIR=/home/zeus/_/software/youpforwhatsapp/data /home/zeus/_/software/youpforwhatsapp/build/target/debug/youp
 # exec whatsapp-for-linux
 exec slack
 # exec Discord
+exec signal-desktop
 # exec discord
 # exec /snap/whatsdesk/28/whatsdesk --type=zygote --no-zygote-sandbox --no-sandbox
 # exec /snap/slack/112/usr/lib/slack/slack --type=zygote --no-zygote-sandbox --no-sandbox

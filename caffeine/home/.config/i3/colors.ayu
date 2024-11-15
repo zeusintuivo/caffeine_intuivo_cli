@@ -1,0 +1,36 @@
+# Ayu
+# https://github.com/dnordstrom/dotfiles-as-files
+
+set $border #5c677c
+set $border_inactive #fafafa
+set $foreground #fafafa
+set $foreground_inactive #828c9a
+set $transparent #00000000
+
+# class
+#   border
+#   background
+#   text
+#   indicator
+#   child_border
+
+client.focused \
+  $border \
+  $border \
+  $foreground \
+  $border \
+  $border
+
+client.unfocused \
+  $border_inactive \
+  $border_inactive \
+  $foreground_inactive \
+  $border_inactive \
+  $border_inactive
+
+client.focused_inactive \
+  $border_inactive \
+  $border_inactive \
+  $foreground_inactive \
+  $border_inactive \
+  $border_inactive
